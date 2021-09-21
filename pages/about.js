@@ -8,6 +8,7 @@ export default function About() {
 
    <div className="container">
     <h1>Om meg</h1>
+    <p></p>
    </div>
   </Layout>
  );
