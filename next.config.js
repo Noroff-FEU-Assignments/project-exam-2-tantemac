@@ -1,5 +1,5 @@
 module.exports = {
   images: {
-    domains: ['www.develophege.no'],
+    domains: ["develophege.no", "c1.staticflickr.com"],
   },
 }
