@@ -7,9 +7,10 @@ export default function Home() {
    <Head />
 
    <div className="container">
-    <h1>Home page</h1>
-    <p>Pianostemmar</p>
-    <p>Søre Sunnmøre og Nordfjord</p>
+        <div className="circle">
+            <p>Pianostemmar</p>
+            <p>Søre Sunnmøre og Nordfjord</p>
+        </div>
    </div>
   </Layout>
  );
