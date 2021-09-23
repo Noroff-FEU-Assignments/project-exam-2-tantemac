@@ -9,9 +9,8 @@ export default function Services({services}) {
         <Layout>
             <Head title="Tenester"/>
 
-            <div className="container">
-                <h1>Tenester</h1>
-                {services.map((service) => {
+            <h1>Tenester</h1>
+            {services.map((service) => {
 
                 return <div className="serviceContainer" key={service.id}>
                             <h3>{service.title}</h3>
@@ -20,7 +19,6 @@ export default function Services({services}) {
                             <p>{service.description}</p>
                         </div>;
                 })}
-            </div>
         </Layout>
  );
 }  

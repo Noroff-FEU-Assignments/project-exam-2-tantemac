@@ -24,7 +24,7 @@ export default function Layout({ children }) {
         </Link>
    </nav>
 
-   <div className="container">{children}</div>
+   <div className="container mx-auto">{children}</div>
 
    <footer>
       <p>© Øystein Eckhoff Holsvik</p>

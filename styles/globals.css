@@ -10,6 +10,8 @@ body {
 		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+/*
+
 a {
 	color: darkgrey;
 	text-decoration: none;
@@ -18,11 +20,6 @@ a {
 
 * {
 	box-sizing: border-box;
-}
-
-.container {
-	max-width: 80%;
-	margin: 0 auto;
 }
 
 .circle {
@@ -43,4 +40,4 @@ a {
 	margin-top: 40px;
 	background-color: #f2f2f2;
 	border-radius: 5px;
-}
+} */

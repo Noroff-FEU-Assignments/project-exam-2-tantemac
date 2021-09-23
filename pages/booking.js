@@ -3,14 +3,11 @@ import Layout from "../components/layout/Layout";
 
 export default function Booking() {
  return (
-  <Layout>
-   <Head title="Bestill pianostemming"/>
-
-   <div className="container">
-    <h1>Bestill pianostemming</h1>
-    <a>Privat</a>
-    <a>Bedrift</a>
-   </div>
-  </Layout>
+    <Layout>
+        <Head title="Bestill pianostemming"/>
+        <h1>Bestill pianostemming</h1>
+        <a>Privat</a>
+        <a>Bedrift</a>
+    </Layout>
  );
 }

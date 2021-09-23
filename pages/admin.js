@@ -3,12 +3,9 @@ import Layout from "../components/layout/Layout";
 
 export default function Admin() {
  return (
-  <Layout>
-   <Head title="Admin"/>
-
-   <div className="container">
-    <h1>Administrer pianostemmar.no</h1>
-   </div>
-  </Layout>
+    <Layout>
+        <Head title="Admin"/>
+        <h1>Administrer pianostemmar.no</h1>
+    </Layout>
  );
 }
