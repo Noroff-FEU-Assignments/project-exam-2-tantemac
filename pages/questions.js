@@ -4,7 +4,7 @@ import Layout from "../components/layout/Layout";
 export default function Questions() {
  return (
   <Layout>
-   <Head />
+   <Head title="Spørsmål og svar"/>
 
    <div className="container">
     <h1>Spørsmål og svar</h1>

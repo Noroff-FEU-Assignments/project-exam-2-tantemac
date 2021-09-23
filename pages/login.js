@@ -4,7 +4,7 @@ import Layout from "../components/layout/Layout";
 export default function Login() {
  return (
   <Layout>
-   <Head />
+   <Head title="Logg inn"/>
 
    <div className="container">
     <h1>Logg inn</h1>

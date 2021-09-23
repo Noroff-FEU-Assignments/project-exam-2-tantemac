@@ -4,7 +4,7 @@ import Layout from "../components/layout/Layout";
 export default function Booking() {
  return (
   <Layout>
-   <Head />
+   <Head title="Bestill pianostemming"/>
 
    <div className="container">
     <h1>Bestill pianostemming</h1>
