@@ -25,6 +25,10 @@ export default function Layout({ children }) {
    </nav>
 
    <div className="container">{children}</div>
+
+   <footer>
+      <p>© Øystein Eckhoff Holsvik</p>
+   </footer>
   </>
  );
 }
