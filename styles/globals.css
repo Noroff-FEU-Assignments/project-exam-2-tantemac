@@ -31,3 +31,12 @@ a {
 	color: white;
 	text-align: center;
 }
+
+.serviceContainer {
+	height: 450px;
+	width: 300px;
+	padding: 20px;
+	margin-top: 40px;
+	background-color: #f2f2f2;
+	border-radius: 5px;
+}

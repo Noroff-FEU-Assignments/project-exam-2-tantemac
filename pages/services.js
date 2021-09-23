@@ -13,9 +13,9 @@ export default function Services({services}) {
                 <h1>Tenester</h1>
                 {services.map((service) => {
 
-                return <div key={service.id}>
+                return <div className="serviceContainer" key={service.id}>
                             <h3>{service.title}</h3>
-                            <Image src={service.image} width={300} height={300} alt={service.title} />
+                            <Image className="serviceImage" src={service.image} width={100} height={100} alt={service.title} />
                             <p>Pris: {service.price},-</p>
                             <p>{service.description}</p>
                         </div>;
