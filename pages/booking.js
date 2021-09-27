@@ -6,8 +6,8 @@ export default function Booking() {
     <Layout>
         <Head title="Bestill pianostemming"/>
         <h1>Bestill pianostemming</h1>
-        <a>Privat</a>
-        <a>Bedrift</a>
+        <a href="/booking-private">Privat</a>
+        <a href="/booking-public">Bedrift</a>
     </Layout>
  );
 }

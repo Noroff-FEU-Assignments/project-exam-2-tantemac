@@ -26,8 +26,8 @@ export default function Layout({ children }) {
 
    <div className="container mx-auto">{children}</div>
 
-   <footer>
-      <p>© Øystein Eckhoff Holsvik</p>
+   <footer className="py-10 mt-10 bg-current">
+      <p className="text-gray-50 text-center">© Øystein Eckhoff Holsvik</p>
    </footer>
   </>
  );
