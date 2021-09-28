@@ -3,26 +3,39 @@ import Link from "next/link";
 export default function Layout({ children }) {
  return (
   <>
-   <nav>
-        <Link href="/">
-            <a>Heim</a>
-        </Link>
-        <Link href="/about">
-            <a>Om meg</a>
-        </Link>
-        <Link href="/services">
-            <a>Tenester</a>
-        </Link>
-        <Link href="/questions">
-            <a>Spørsmål og svar</a>
-        </Link>
-        <Link href="/booking">
-            <a>Bestill pianostemming</a>
-        </Link>
-        <Link href="/login">
-            <a>Logg inn</a>
-        </Link>
-   </nav>
+    <nav className="bg-white shadow-lg">
+        <div className="max-w-6xl mx-auto px-4">
+			<div className="flex justify-between">
+				<div className="flex space-x-7">
+                    <div>
+						<a href="#" class="flex items-center py-4 px-2">
+							{/* <img src="logo.png" alt="Logo" class="h-8 w-8 mr-2" /> */}
+						</a>
+					</div>
+                    <div className="hidden md:flex items-center space-x-7">
+                        <Link href="/">
+                            <a>Heim</a>
+                        </Link>
+                        <Link href="/about">
+                            <a>Om meg</a>
+                        </Link>
+                        <Link href="/services">
+                            <a>Tenester</a>
+                        </Link>
+                        <Link href="/questions">
+                            <a>Spørsmål og svar</a>
+                        </Link>
+                        <Link href="/booking">
+                            <a>Bestill pianostemming</a>
+                        </Link>
+                        <Link href="/login">
+                            <a>Logg inn</a>
+                        </Link>
+                    </div>
+                </div>
+			</div>
+		</div>
+    </nav>
 
    <div className="container mx-auto">{children}</div>
 
