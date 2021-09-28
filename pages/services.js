@@ -3,7 +3,7 @@ import Layout from "../components/layout/Layout";
 import axios from "axios";
 import { SERVICE_URL } from "../constants/api";
 import Image from "next/image";
-import { useAuth } from "../utils/auth";
+import { useAuth } from "../components/utils/auth";
 import DeleteButton from "../components/layout/DeleteButton";
 import { useState } from "react";
 import { useRouter } from "next/router";
@@ -34,9 +34,8 @@ export default function Services({services}) {
     return (
         <Layout>
             <Head title="Tenester"/>
-
             <h1 className="text-5xl pt-10 pb-6">Tenester</h1>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4"> 
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4"> 
             {services.map((service) => {
 
                 return <div className="flex-1 max-w-xs p-4" key={service.id}>

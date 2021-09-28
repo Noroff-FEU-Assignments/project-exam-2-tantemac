@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { AUTH_URL } from "../../constants/api";
-import { setJWT } from "../../utils/auth";
+import { setJWT } from "../utils/auth";
 
 
 export default function LoginForm () {

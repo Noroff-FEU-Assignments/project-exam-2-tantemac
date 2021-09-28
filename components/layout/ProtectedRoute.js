@@ -1,4 +1,4 @@
-import { useAuth } from "../../utils/auth"
+import { useAuth } from "../utils/auth"
 import LoginForm from "./LoginForm";
 
 export const ProtectedRoute = ({children}) => {

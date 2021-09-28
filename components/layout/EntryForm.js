@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import { SERVICE_URL } from "../../constants/api";
-import { setJWT, useAuth } from "../../utils/auth";
+import { setJWT, useAuth } from "../utils/auth";
 import { useState } from "react";
 import { useRouter } from "next/router";
 
@@ -9,7 +9,7 @@ export default function EntryForm () {
 
     const [error, setError] = useState (false);
     const authToken = useAuth();
-    
+
     const { handleSubmit, register } = useForm();
 
     const submit = (data) => { 
