@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Layout({ children }) {
  return (
@@ -8,9 +9,11 @@ export default function Layout({ children }) {
 			<div className="flex justify-between">
 				<div className="flex space-x-7">
                     <div>
-						<a href="#" class="flex items-center py-4 px-2">
-							{/* <img src="logo.png" alt="Logo" class="h-8 w-8 mr-2" /> */}
-						</a>
+                        <Link href="/">
+						    <a className="flex items-center py-2 px-2">
+							    <Image src="/logo.png" alt="Logo" width="200" height="60" className="mr-0" />
+						    </a>
+                        </Link>
 					</div>
                     <div className="hidden md:flex items-center space-x-7">
                         <Link href="/">
@@ -59,9 +62,6 @@ export default function Layout({ children }) {
 //     let authLink = `<li class="nav-item">
 //                         <a class="menuIcon nav-link ${pathname === "/login.html" ? "active" : ""}" href="login.html"><i class="fas fa-user-circle fa-1x"></i></a>
 //                     </li>
-//                     <li class="nav-item">
-//                         <a class="menuIcon nav-link ${pathname === "/cart.html" ? "active" : ""}" href="cart.html"><i class="fas fa-shopping-cart fa-1x"></i></a>
-//                     </li>`;
 
 //     if(username) {
 //         authLink = `<li class="nav-item">

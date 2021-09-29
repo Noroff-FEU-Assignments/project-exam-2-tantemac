@@ -1,43 +1,63 @@
-const tokenKey = "token";
-const userKey = "user";
+import { useEffect, useState } from "react";
 
-export default function saveToken(token) {
-    SaveToStorage(tokenKey, token);
+const LOCALSTORAGE_KEY = "auth";
+
+export const setJWT=(jwt) => {
+    localStorage.setItem(LOCALSTORAGE_KEY, jwt);
 }
 
-export default function getToken() {
-    return getFromStorage(tokenKey);
+
+export const useAuth=() => {
+    const [jwt, setJWT] = useState ()
+    useEffect(() => {
+        if (typeof window !=="undefined") {
+            const auth = window.localStorage.getItem(LOCALSTORAGE_KEY);
+            setJWT(auth || "");
+        }
+    }, [])
+    return jwt;
 }
 
-export function saveUser(user) {
-    saveToStorage(userKey, user);
-}
+// const tokenKey = "token";
+// const userKey = "user";
 
-export function getUserName() {
-    const user = getFromStorage(userKey);
+// export default function saveToken(token) {
+//     SaveToStorage(tokenKey, token);
+// }
 
-    if (user) {
-        return user.username;
-    }
+// export function getToken() {
+//     return getFromStorage(tokenKey);
+// }
 
-    return null;
-}
+// export function saveUser(user) {
+//     saveToStorage(userKey, user);
+// }
 
-export default function clearUser() {
-    localStorage.removeItem(userKey);
-    localStorage.removeItem(tokenKey);
-}
+// export function getUserName() {
+//     const user = getFromStorage(userKey);
 
-function saveToStorage(key, value) {
-    localStorage.setItem(key, JSON.stringify(value));
-}
+//     if (user) {
+//         return user.username;
+//     }
 
-function getFromStorage(key) {
-    const value = localStorage.getItem(key);
+//     return null;
+// }
 
-    if (!value) {
-        return [];
-    }
+// export function clearUser() {
+//     localStorage.removeItem(userKey);
+//     localStorage.removeItem(tokenKey);
+// }
+
+// function saveToStorage(key, value) {
+//     localStorage.setItem(key, JSON.stringify(value));
+// }
+
+// function getFromStorage(key) {
+//     const value = localStorage.getItem(key);
+
+//     if (!value) {
+//         return [];
+//     }
     
-    return JSON.parse(value);
-}
+//     return JSON.parse(value);
+// }

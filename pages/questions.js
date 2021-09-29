@@ -5,7 +5,7 @@ export default function Questions() {
  return (
     <Layout>
         <Head title="Spørsmål og svar"/>
-        <h1>Spørsmål og svar</h1>
+        <h1 className="text-4xl text-center pt-10 pb-6">Spørsmål og svar</h1>
         <p className="client">Kunden spør.</p>
         <p className="pianotuner">Pianostemmaren svarar.</p>
         

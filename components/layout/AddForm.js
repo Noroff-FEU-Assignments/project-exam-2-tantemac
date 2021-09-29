@@ -1,11 +1,10 @@
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import { SERVICE_URL } from "../../constants/api";
-import { setJWT, useAuth } from "../utils/auth";
+import { setJWT, useAuth } from "../utils/storage";
 import { useState } from "react";
-import { useRouter } from "next/router";
 
-export default function EntryForm () {
+export default function AddForm () {
 
     const [error, setError] = useState (false);
     const authToken = useAuth();
@@ -35,7 +34,7 @@ export default function EntryForm () {
     return (
         <form onSubmit={handleSubmit(submit)}>
             {error&& (
-                <div>Ukjent brukernamn/passord</div>
+                <div className="m-7 p-3 bg-red-700 text-white rounded">Du må fylle ut alle felta. Med unntak av bilete.</div>
             )}
             <div>
                 <input type="text" placeholder="Tittel" {...register("title")}></input>
@@ -49,7 +48,7 @@ export default function EntryForm () {
             <div>
                 <textarea placeholder="Beskrivelse" {...register("description")}></textarea>
             </div>
-            <button type="submit">Lagre</button>
+            <button className="bg-green-700 text-white p-2 my-4 text-white w-full rounded hover:bg-opacity-75" type="submit">Legg til</button>
         </form>
     )
 }

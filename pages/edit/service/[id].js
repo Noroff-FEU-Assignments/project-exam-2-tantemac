@@ -1,16 +1,18 @@
 import Head from "../../../components/layout/Head";
 import Layout from "../../../components/layout/Layout";
 import { ProtectedRoute } from "../../../components/layout/protectedRoute";
-import UpdateEntryForm from "../../../components/layout/UpdateEntryForm";
+import EditForm from "../../../components/layout/EditForm";
 import axios from "axios";
 import { SERVICE_URL } from "../../../constants/api";
 
-export default function Entry ({service}) {
+export default function Edit ({service}) {
 
     return (
         <Layout>
+            <Head title="Rediger"/>
+            <h1 className="hidden">Rediger teneste</h1>
             <ProtectedRoute> 
-                <UpdateEntryForm orgService={service}/>
+                <EditForm orgService={service}/>
             </ProtectedRoute>
         </Layout>
     )

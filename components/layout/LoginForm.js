@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { AUTH_URL } from "../../constants/api";
-import { setJWT } from "../utils/auth";
+import { setJWT } from "../utils/storage";
 
 
 export default function LoginForm () {
@@ -26,7 +26,7 @@ export default function LoginForm () {
         }).then(response => {
             console.log(response);
             setJWT(response.data.jwt);
-            router.push ("/admin");
+            router.push ("/services");
         }).catch(error => {
             console.error(error);
             setError(true);
@@ -44,7 +44,7 @@ export default function LoginForm () {
             <div>
                 <input type="password" placeholder="Passord" {...register("password")}></input>
             </div>
-            <button type="submit">LOGG INN</button>
+            <button type="submit">Logg inn</button>
         </form>
     )
 }
