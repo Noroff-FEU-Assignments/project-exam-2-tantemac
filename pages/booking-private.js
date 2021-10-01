@@ -6,7 +6,7 @@ export default function BookingPrivate() {
  return (
     <Layout>
         <Head title="Privatkunde"/>
-        <h1>Bestill som privatkunde</h1>
+        <h1 className="text-4xl text-center pt-10 pb-6">Bestill som privatkunde</h1>
         <BookingFormPrivate />
     </Layout>
  );

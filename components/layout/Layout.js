@@ -1,7 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
+import { useAuth } from "../utils/storage";
+
 
 export default function Layout({ children }) {
+
  return (
   <>
     <nav className="bg-white shadow-lg">
@@ -48,6 +51,7 @@ export default function Layout({ children }) {
   </>
  );
 }
+
 
 // import { getUserName } from "../utils/storage.js";
 // import logoutButton from "./logoutButton.js";

@@ -36,15 +36,15 @@ export default function LoginForm () {
     return (
         <form onSubmit={handleSubmit(submit)}>
             {error&& (
-                <div>Ukjent brukernamn/passord</div>
+                <div className="m-7 p-3 bg-red-700 text-white rounded">Ukjent brukernamn/passord</div>
             )}
             <div>
-                <input type="text" placeholder="Brukarnamn" {...register("username")}></input>
+                <input name="username" type="text" placeholder="Brukarnamn" {...register("username")}></input>
             </div>
             <div>
-                <input type="password" placeholder="Passord" {...register("password")}></input>
+                <input name="password" type="password" placeholder="Passord" {...register("password")}></input>
             </div>
-            <button type="submit">Logg inn</button>
+            <button className="bg-green-700 text-white p-2 my-4 text-white w-full rounded hover:bg-opacity-75" type="submit">Logg inn</button>
         </form>
     )
 }

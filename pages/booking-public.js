@@ -7,7 +7,7 @@ export default function BookingPublic() {
  return (
     <Layout>
         <Head title="Bedriftskunde"/>
-        <h1>Bestill som bedriftskunde</h1>
+        <h1 className="text-4xl text-center pt-10 pb-6">Bestill som bedriftskunde</h1>
         <BookingFormPublic />
     </Layout>
  );
