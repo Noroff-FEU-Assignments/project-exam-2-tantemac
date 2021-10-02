@@ -45,14 +45,14 @@ export default function LoginForm () {
                 type="text" 
                 placeholder="Brukarnamn" 
                 {...register("username")}
-                className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500">                
+                className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500 mt-8">                
             </input>
             <input 
                 name="password" 
                 type="password" 
                 placeholder="Passord" 
                 {...register("password")}
-                className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500">
+                className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500 mt-8">
             </input>
             <button className="bg-black bg-opacity-75 text-white p-2 my-4 mt-10 text-white w-full rounded hover:bg-opacity-50" type="submit">Logg inn</button>
         </form>
