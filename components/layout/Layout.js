@@ -1,10 +1,21 @@
 import Link from "next/link";
 import Image from "next/image";
-import { useAuth } from "../utils/storage";
+import { clearUser, useAuth } from "../utils/storage";
+import logoutButton from "./LogOutButton";
 
 
 export default function Layout({ children }) {
 
+
+    const username = useAuth();
+
+    let authLink = <Link href="/login">
+                        <button>Logg inn</button>
+                    </Link>;
+
+        if(username) {
+            authLink = logoutButton();
+    }
  return (
   <>
     <nav className="bg-white shadow-lg font-global">
@@ -34,9 +45,7 @@ export default function Layout({ children }) {
                         <Link href="/booking">
                             <a>Bestill pianostemming</a>
                         </Link>
-                        <Link href="/login">
-                            <a>Logg inn</a>
-                        </Link>
+                        {authLink}
                     </div>
                 </div>
 			</div>
@@ -52,6 +61,16 @@ export default function Layout({ children }) {
  );
 }
 
+// const isLoggedIn=useAuth();
+
+// if (isLoggedIn===null) {
+//     return null;
+// }
+// if (!isLoggedIn) {
+//     return (
+//         <LoginForm />
+//     )
+// }
 
 // import { getUserName } from "../utils/storage.js";
 // import logoutButton from "./logoutButton.js";

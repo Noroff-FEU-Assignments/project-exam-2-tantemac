@@ -1,15 +1,15 @@
-// import { clearUser } from "../utils/storage";
+import { useRouter } from "next/router";
+import { clearUser } from "../utils/storage";
 
-// export default function logoutButton() {
-    
-//     if (button) {
-//         button.onclick = function () {
-//             const doLogout = confirm("Er du sikker på at du vil logge ut?");
+export default function LogoutButton() {
+    const router = useRouter();
 
-//             if (doLogout) {
-//                 clearUser();
-//                 location.href="/index";
-//             }
-//         };
-//     }
-// }
+    const onLogout = () => {
+        clearUser(); 
+        router.push ("/");
+    }
+    return <button 
+                type="button" 
+                onClick={onLogout}
+                className="bg-black bg-opacity-75 text-white rounded-lg p-3 hover:bg-opacity-50">Logg ut</button>
+}

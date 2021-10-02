@@ -18,6 +18,10 @@ export const useAuth=() => {
     return jwt;
 }
 
+export function clearUser() {
+    localStorage.removeItem(LOCALSTORAGE_KEY);
+}
+
 // const tokenKey = "token";
 // const userKey = "user";
 
@@ -44,7 +48,7 @@ export const useAuth=() => {
 // }
 
 // export function clearUser() {
-//     localStorage.removeItem(userKey);
+//     localStorage.removeItem(LOCALSTORAGE_KEY);
 //     localStorage.removeItem(tokenKey);
 // }
 
