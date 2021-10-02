@@ -1,13 +1,15 @@
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import { SERVICE_URL } from "../../constants/api";
-import { setJWT, useAuth } from "../utils/storage";
+import { useAuth } from "../utils/storage";
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 export default function AddForm () {
 
     const [error, setError] = useState (false);
     const authToken = useAuth();
+    const router = useRouter();
 
     const { handleSubmit, register } = useForm();
 
@@ -24,6 +26,7 @@ export default function AddForm () {
                 Authorization: `Bearer ${authToken}`
             }
         }).then(response => {
+            router.push ("/services");
             console.log(response);
         }).catch(error => {
             console.error(error);

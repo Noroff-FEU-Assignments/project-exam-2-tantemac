@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { SERVICE_URL } from "../../constants/api";
 import { useAuth } from "../utils/storage";
 import { useState } from "react";
+import { useRouter } from "next/router";
 import DeleteButton from "./DeleteButton";
 
 
@@ -11,6 +12,7 @@ export default function EditForm ({orgService = {}, onSave}) {
     const [error, setError] = useState (false);
     const authToken = useAuth();
     const [service, setService] = useState(orgService);
+    const router = useRouter();
 
     const onDelete = (id) => {
         console.log(id);
@@ -20,6 +22,7 @@ export default function EditForm ({orgService = {}, onSave}) {
             }
         }).then(response => {
             console.log(response, "No er det sletta");
+            router.push ("/services");
         }).catch(error => {
             console.error(error);
             setError(true);
@@ -58,6 +61,7 @@ export default function EditForm ({orgService = {}, onSave}) {
             if (typeof onSave === "function") {
                 onSave(response.data);
             }
+            router.push ("/services");
         }).catch(error => {
             console.error(error);
             setError(true);
