@@ -38,7 +38,6 @@ export default function BookingFormPrivate() {
           name="fullname"
           className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
       />
-      {/* <ValidationError prefix="Fullname" field="fullname" errors={state.errors} /> */}
 
       <label
           htmlFor="phone"
@@ -54,7 +53,6 @@ export default function BookingFormPrivate() {
           name="phone"
           className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
       />
-      {/* <ValidationError prefix="Phone" field="phone" errors={state.errors} /> */}
   
       <label
           htmlFor="email"
@@ -70,7 +68,6 @@ export default function BookingFormPrivate() {
           }}
           className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
       />
-      {/* <ValidationError prefix="Email" field="email" errors={state.errors} /> */}
 
       <label
           htmlFor="adress"
@@ -86,7 +83,6 @@ export default function BookingFormPrivate() {
           }}
           className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
       />
-      {/* <ValidationError prefix="Adress" field="adress" errors={state.errors} /> */}
 
       <label
           htmlFor="zip"
@@ -102,7 +98,6 @@ export default function BookingFormPrivate() {
           }}
           className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
       />
-      {/* <ValidationError prefix="Zip" field="zip" errors={state.errors} /> */}
 
       <label
           htmlFor="city"
@@ -118,7 +113,6 @@ export default function BookingFormPrivate() {
           }}
           className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
       />
-      {/* <ValidationError prefix="City" field="city" errors={state.errors} /> */}
      
       <label
           htmlFor="message"
@@ -133,7 +127,6 @@ export default function BookingFormPrivate() {
           }}
           className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500">
       </textarea>
-      {/* <ValidationError prefix="Message" field="message" errors={state.errors} /> */}
       
       <div className="flex flex-row items-center justify-start">
           <button
@@ -141,7 +134,6 @@ export default function BookingFormPrivate() {
               className="px-10 mt-8 py-2 bg-green-700 text-white rounded-md text-lg flex flex-row w-full items-center hover:bg-opacity-75">
           Bestill
           </button>
-          {/* <ValidationError errors={state.errors} /> */}
       </div>
   </form>
     );

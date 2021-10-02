@@ -7,8 +7,8 @@ export default function Layout({ children }) {
 
  return (
   <>
-    <nav className="bg-white shadow-lg">
-        <div className="max-w-6xl mx-auto px-4">
+    <nav className="bg-white shadow-lg font-global">
+        <div className="max-w-6xl px-4">
 			<div className="flex justify-between">
 				<div className="flex space-x-7">
                     <div>
@@ -18,7 +18,7 @@ export default function Layout({ children }) {
 						    </a>
                         </Link>
 					</div>
-                    <div className="hidden md:flex items-center space-x-7">
+                    <div className="hidden md:flex items-center space-x-8">
                         <Link href="/">
                             <a>Heim</a>
                         </Link>
@@ -43,10 +43,10 @@ export default function Layout({ children }) {
 		</div>
     </nav>
 
-   <div className="container mx-auto">{children}</div>
+   <div className="container mx-auto font-global">{children}</div>
 
-   <footer className="py-10 mt-10 bg-current">
-      <p className="text-gray-50 text-center">© Øystein Eckhoff Holsvik</p>
+   <footer className="py-10 mt-10 bg-black bg-opacity-75">
+      <p className="text-white text-center">© Øystein Eckhoff Holsvik</p>
    </footer>
   </>
  );

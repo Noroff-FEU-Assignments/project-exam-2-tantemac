@@ -7,12 +7,12 @@ export default function Booking() {
     <Layout>
         <Head title="Bestill pianostemming"/>
         <h1 className="text-4xl text-center pt-10 pb-6">Bestill pianostemming</h1>
-        <div className="flex flex-col justify-center m-8 md:flex-row md:space-x-4 space-x-reverse">
+        <div className="flex flex-col justify-center m-8 space-x-reverse md:flex-row md:space-x-4">
         <Link href="/booking-private">
-            <a className="p-8 mr-10 bg-green-700 text-white text-center text-xl rounded-lg focus:ring-4 focus:ring-green-700 focus:ring-opacity-50 w-2/4">Privat</a>
+            <a className="p-8 mt-8 bg-black bg-opacity-75 text-white text-center text-xl rounded-lg focus:ring-4 focus:ring-black focus:ring-opacity-75 hover:bg-opacity-50 w-2/4 md:mr-10">Privatkunde</a>
         </Link>
         <Link href="/booking-public">
-            <a className="p-8 ml-10 bg-yellow-600 text-white text-center text-xl rounded-lg focus:ring-4 focus:ring-yellow-600 focus:ring-opacity-50 w-2/4">Bedrift</a>
+            <a className="p-8 mt-8 bg-black bg-opacity-75 text-white text-center text-xl rounded-lg focus:ring-4 focus:ring-black focus:ring-opacity-75 hover:bg-opacity-50 w-2/4 md:ml-10">Bedriftkunde</a>
         </Link>
         </div>
     </Layout>

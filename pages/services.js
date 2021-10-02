@@ -31,7 +31,7 @@ export default function Services({services}) {
                             <p>Pris: {service.price},-</p>
                             <p>{service.description}</p>
                             {authToken&&(
-                                <button className="bg-yellow-600 p-2 rounded my-4 text-white w-full hover:bg-opacity-75">
+                                <button className="bg-black bg-opacity-75 p-2 rounded my-4 text-white w-full hover:bg-opacity-50">
                                     <Link href={`/edit/service/${service.id}`}>
                                         <a>Rediger</a>
                                     </Link>        
@@ -41,7 +41,7 @@ export default function Services({services}) {
             })}
             {authToken&&(
                 <Link href="/add">
-                    <button className="bg-green-700 hover:bg-opacity-75 text-white text-lg rounded-lg">
+                    <button className="bg-black bg-opacity-75 hover:bg-opacity-50 text-white text-lg rounded-lg">
                         <p className="text-8xl">+</p>
                         <p>Legg til ny teneste</p>
                     </button>
