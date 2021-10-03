@@ -28,15 +28,16 @@ export default function Services({services}) {
                             )}
                             </div>
                             <div className="px-6 py-4">
-                                <h3 className="py-2 font-heading text-lg">{service.title}</h3>
+                                <h3 className="py-2 h-20 font-heading text-lg">{service.title}</h3>
                                 <p className="py-2">Pris: {service.price},-</p>
-                                <p className="">{service.description}</p>
+                                <p className="lg:h-80">{service.description}</p>
                                 {authToken&&(
-                                    <button className="bg-black bg-opacity-75 p-2 rounded my-4 text-white w-full hover:bg-opacity-50">
                                         <Link href={`/edit/service/${service.id}`}>
-                                            <a>Rediger</a>
+                                            <button className="bg-black bg-opacity-75 p-2 rounded my-4 text-white w-full focus:ring-4 focus:ring-black focus:ring-opacity-75 hover:bg-opacity-50">
+                                                <a>Rediger</a>
+                                            </button>
                                         </Link>        
-                                    </button>
+                                   
                                 )}
                             </div>
                         </div>;
@@ -75,20 +76,3 @@ return {
         }, 
     };
 }  
-
-{/* <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
-    <!--Card 1-->
-    <div class="rounded overflow-hidden shadow-lg">
-      <img class="w-full" src="/mountain.jpg" alt="Mountain">
-      <div class="px-6 py-4">
-        <div class="font-bold text-xl mb-2">Mountain</div>
-        <p class="text-gray-700 text-base">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-        </p>
-      </div>
-      <div class="px-6 pt-4 pb-2">
-        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-      </div>
-    </div> */}

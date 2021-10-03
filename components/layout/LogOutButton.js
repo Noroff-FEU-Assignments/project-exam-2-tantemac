@@ -6,8 +6,9 @@ export default function LogoutButton() {
 
     const onLogout = () => {
         clearUser(); 
-        router.push ("/");
+        router.push("/");
     }
+
     return <button 
                 type="button" 
                 onClick={onLogout}

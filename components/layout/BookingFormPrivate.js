@@ -132,13 +132,13 @@ export default function BookingFormPrivate() {
             onChange={(e) => {
                 setMessage(e.target.value);
             }}
-            className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500">
+            className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500 h-80 md:h-40">
         </textarea>
         
-        <div className="flex flex-row items-center justify-start">
+        <div className="flex flex-row items-center">
             <button
                 type="submit"
-                className="px-10 mt-8 py-2 bg-black opacity-75 text-white rounded-md text-lg flex flex-row w-full items-center hover:bg-opacity-50">
+                className="px-10 mt-8 py-2 bg-black opacity-75 text-white rounded-md text-lg w-full text-center focus:ring-4 focus:ring-black focus:ring-opacity-75 hover:bg-opacity-50">
                 Bestill pianostemming
             </button>
         </div>
